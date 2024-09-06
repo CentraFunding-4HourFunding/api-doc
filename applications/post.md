@@ -6,8 +6,8 @@ Submit a new credit application to Centra Platform.
 
 ***Host***
 ```
-  Production : ht&#8203;tps://
-  Dev/Test   : ht&#8203;tp://centrafunding--partial.sandbox.my.salesforce-sites.com
+  Production : https://
+  Dev/Test   : https://centrafunding--partial.sandbox.my.salesforce-sites.com
 ```
 
 

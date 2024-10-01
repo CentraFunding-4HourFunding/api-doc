@@ -44,7 +44,7 @@ Submit a new credit application to Centra Platform.
                "street": "string | The guarantor's street address",
                "city": "string | The city",
                "state": "string | The state/prov",
-              "zip": "string | The zip/postal",
+               "zip": "string | The zip/postal",
             },
             "phone": "string | The guarantor's phone number",
             "ssn": "string | The guarantor's Social Security Number",

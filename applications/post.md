@@ -27,7 +27,7 @@ Submit a new credit application to Centra Platform.
     "borrower": {
         "name": "string | The name of the company",
         "address": {
-            "street | The company headquarters street address",
+            "street": "string | The company headquarters street address",
             "city": "string | The city where the company headquarters is located ",
             "state": "string | The state/prov where the company headquarters is located",
             "zip": "string | The zip/postal of the company headquarters",
@@ -41,7 +41,7 @@ Submit a new credit application to Centra Platform.
             "firstname": "string | The guarantor's first name",
             "lastname": "string | The guarantor's last name",
             "address": {
-               "street | The guarantor's street address",
+               "street": "string | The guarantor's street address",
                "city": "string | The city",
                "state": "string | The state/prov",
               "zip": "string | The zip/postal",
@@ -59,14 +59,14 @@ Submit a new credit application to Centra Platform.
             "price": "number | The product price"
             "condition": "string | The condition of the equipment - 'new' | 'used'",
             "address": {
-               "street | The equipment location street address",
+               "street": "string | The equipment location street address",
                "city": "string | The city",
                "state": "string | The state/prov",
                "zip": "string | The zip/postal",
             },
             "vendorName": "string | The vendor's name",
             "vendorAddress": {
-               "street | The equvipment vendor street address",
+               "street": "string | The equvipment vendor street address",
                "city": "string | The city",
                "state": "string | The state/prov",
                "zip": "string | The zip/postal",

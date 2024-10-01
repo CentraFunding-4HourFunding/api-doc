@@ -66,7 +66,7 @@ Submit a new credit application to Centra Platform.
             },
             "vendorName": "string | The vendor's name",
             "vendorAddress": {
-               "street": "string | The equvipment vendor street address",
+               "street": "string | The equipment vendor street address",
                "city": "string | The city",
                "state": "string | The state/prov",
                "zip": "string | The zip/postal",

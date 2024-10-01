@@ -98,10 +98,12 @@ A "full" credit application contains all information necessary to receive instan
     "borrower": {
         "name": "Test Company Name",
         "dba" : "Test Inc",
-        "street": "123 Main St",
-        "city": "Minneapolis", 
-        "state": "MN", 
-        "zip": "55401", 
+        "address" : {
+            "street": "123 Main St",
+            "city": "Minneapolis", 
+            "state": "MN", 
+            "zip": "55401"
+        },
         "phone": "555-555-5555",
         "establishedDate": "2011-10-25"
     },
@@ -109,10 +111,12 @@ A "full" credit application contains all information necessary to receive instan
         {
             "firstname": "John",
             "lastname": "Doe",
-            "street":"123 Oklahoma Ave",
-            "city" : "Oklahoma City",
-            "state": "OH",
-            "zip":"22222",
+            "address" : {
+                "street":"123 Oklahoma Ave",
+                "city" : "Oklahoma City",
+                "state": "OH",
+                "zip":"22222"
+            },
             "phone": "111-222-3333",
             "ssn": "111-11-1111",
             "percentofOwnership": 100.00,
@@ -124,15 +128,14 @@ A "full" credit application contains all information necessary to receive instan
             "description": "desc",
             "price": 10000.00,
             "condition": "New",
-            "address" : "123 Oklahoma Ave",
-            "city" : "Oklahoma City",
-            "state":"OK",
-            "zip" : "22222",
+            "address" : {
+                "street":"123 Oklahoma Ave",
+                "city" : "Oklahoma City",
+                "state": "OH",
+                "zip":"22222"
+            },
             "vendorName"  : null,
             "vendorAddress" : null,
-            "vendorCity" : null,
-            "vendorState": null,
-            "vendorZip" : null,
             "vendorPhone" : null
         }
     ],

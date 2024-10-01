@@ -26,10 +26,12 @@ Submit a new credit application to Centra Platform.
 
     "borrower": {
         "name": "string | The name of the company",
-        "address": "string | The company headquarters street address",
-        "city": "string | The city where the company headquarters is located ",
-        "state": "string | The state/prov where the company headquarters is located",
-        "zip": "string | The zip/postal of the company headquarters",
+        "address": {
+            "street | The company headquarters street address",
+            "city": "string | The city where the company headquarters is located ",
+            "state": "string | The state/prov where the company headquarters is located",
+            "zip": "string | The zip/postal of the company headquarters",
+         },
         "phone": "string | The phone number for the company headquarters",
         "establishedDate" : "string | Date format YYYY-MM-DD"
     },
@@ -38,10 +40,12 @@ Submit a new credit application to Centra Platform.
         {
             "firstname": "string | The guarantor's first name",
             "lastname": "string | The guarantor's last name",
-            "address": "string | The guarantor's street address",
-            "city": "string | The guarantor's city",
-            "state": "string | The guarantor's state/prov",
-            "zip": "string | The guarantor's zip/postal",
+            "address": {
+               "street | The guarantor's street address",
+               "city": "string | The city",
+               "state": "string | The state/prov",
+              "zip": "string | The zip/postal",
+            },
             "phone": "string | The guarantor's phone number",
             "ssn": "string | The guarantor's Social Security Number",
             "percentofOwnership": "number | The percentage owned",
@@ -54,15 +58,19 @@ Submit a new credit application to Centra Platform.
             "description": "string | The product description",
             "price": "number | The product price"
             "condition": "string | The condition of the equipment - 'new' | 'used'",
-            "address": "string | The equipment location address",
-            "city": "string | The equipment location city",
-            "state": "string | The equipment location state/prov",
-            "zip": "string | The equipment location zip/postal",
+            "address": {
+               "street | The equipment location street address",
+               "city": "string | The city",
+               "state": "string | The state/prov",
+               "zip": "string | The zip/postal",
+            },
             "vendorName": "string | The vendor's name",
-            "vendorAddress": "string | The vendors's street address",
-            "vendorCity": "string | The vendor's city",
-            "vendorState": "string | The vendor's state/prov",
-            "vendorZip": "string | The vendors's zip/postal",
+            "vendorAddress": {
+               "street | The equvipment vendor street address",
+               "city": "string | The city",
+               "state": "string | The state/prov",
+               "zip": "string | The zip/postal",
+            },
             "vendorPhone": "string | The vendors's phone",
         }
     ],

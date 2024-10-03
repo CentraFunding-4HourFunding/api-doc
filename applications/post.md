@@ -157,7 +157,7 @@ A "full" credit application contains all information necessary to receive instan
 
 ```json
 {
-    "application_id": "string | The id of the new application",
+    "id": "string | The id of the new application",
     "status": "string | The status of the new application"
 }
 ```
@@ -166,7 +166,7 @@ A "full" credit application contains all information necessary to receive instan
 
 ```json
 {
-    "app_id": "000000000000",
+    "id": "000000000000",
     "status": "New"
 }
 ```

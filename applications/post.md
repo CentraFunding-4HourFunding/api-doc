@@ -23,7 +23,7 @@ Submit a new credit application to Centra Platform.
 {
     "authorizationCode": "string | Required | An identifier that can be set to correlate applications with entities.",
     "partnerRepEmail": "boolean | Optional | Email Address of Sales person",
-
+    "transactionSummary": "string | Optional | Transaction notes.",
     "borrower": {
         "name": "string | The name of the company",
         "address": {
@@ -33,13 +33,19 @@ Submit a new credit application to Centra Platform.
             "zip": "string | The zip/postal of the company headquarters",
          },
         "phone": "string | The phone number for the company headquarters",
-        "establishedDate" : "string | Date format YYYY-MM-DD"
+        "isCorpOnly": "boolean | True/False",
+        "businessEntityType" : "string | Sole-Proprietorship, Partnership, LLC, Corporation",
+        "federalTaxIdNumber" : "string | The EIN# issued to the company by the IRS. Example",
+        "establishedDate" : "string | Date format YYYY-MM-DD",
+        "businessDescription" : "string – Example: Automotive Business, Mechanic, Doctor, Restaurant, Car Wash, Trucking, Construction, Landscaping, etc.",
+        "website" : "string | URL for borrower’s website"
     },
 
     "guarantors": [
         {
             "firstName": "string | The guarantor's first name",
             "lastName": "string | The guarantor's last name",
+            "title": "string | Title of the Guarantor",
             "address": {
                "street": "string | The guarantor's street address",
                "city": "string | The city",
@@ -50,6 +56,7 @@ Submit a new credit application to Centra Platform.
             "ssn": "string | The guarantor's Social Security Number",
             "percentofOwnership": "number | The percentage owned",
             "authorizedCreditRelease": "boolean | Authorization for credit release.",
+            "isHomeOwner" : "boolean | True/False"
     	}
     ],
 

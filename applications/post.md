@@ -109,8 +109,8 @@ A "full" credit application contains all information necessary to receive instan
     },
     "guarantors" : [
         {
-            "firstname": "John",
-            "lastname": "Doe",
+            "firstName": "John",
+            "lastName": "Doe",
             "address" : {
                 "street":"123 Oklahoma Ave",
                 "city" : "Oklahoma City",

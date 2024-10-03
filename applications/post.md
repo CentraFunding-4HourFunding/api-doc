@@ -38,8 +38,8 @@ Submit a new credit application to Centra Platform.
 
     "guarantors": [
         {
-            "firstname": "string | The guarantor's first name",
-            "lastname": "string | The guarantor's last name",
+            "firstName": "string | The guarantor's first name",
+            "lastName": "string | The guarantor's last name",
             "address": {
                "street": "string | The guarantor's street address",
                "city": "string | The city",

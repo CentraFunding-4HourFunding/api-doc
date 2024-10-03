@@ -54,7 +54,7 @@ Submit a new credit application to Centra Platform.
             },
             "phone": "string | The guarantor's phone number",
             "ssn": "string | The guarantor's Social Security Number",
-            "percentofOwnership": "number | The percentage owned",
+            "percentOfOwnership": "number | The percentage owned",
             "authorizedCreditRelease": "boolean | Authorization for credit release.",
             "isHomeOwner" : "boolean | True/False"
     	}
@@ -126,7 +126,7 @@ A "full" credit application contains all information necessary to receive instan
             },
             "phone": "111-222-3333",
             "ssn": "111-11-1111",
-            "percentofOwnership": 100.00,
+            "percentOfOwnership": 100.00,
             "authorizedCreditRelease": true
         }
     ],

@@ -188,7 +188,7 @@ A "full" credit application contains all information necessary to receive instan
 
 ```json
 {
-  "id": null | "",
+  "id": null,
   "message": "Data Validation Errors, please correct and try again",
   "errors": [
     {

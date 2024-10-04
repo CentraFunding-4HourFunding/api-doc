@@ -21,71 +21,76 @@ Submit a new credit application to Centra Platform.
 
 ```json
 {
-    "authorizationCode": "string | Required | An identifier that can be set to correlate applications with entities.",
-    "partnerRepEmail": "boolean | Optional | Email Address of Sales person",
-    "transactionSummary": "string | Optional | Transaction notes.",
+    "authorizationCode": "String | Required | An identifier that can be set to correlate applications with entities.",
+    "partnerRepEmail": "Boolean | Optional | Email Address of Sales person",
+    "transactionSummary": "String | Optional | Transaction notes.",
+    "isCorpOnly": "Boolean | Required | True/False",
+
     "borrower": {
-        "name": "string | The name of the company",
+        "name": "String | Required | The name of the company",
+        "dba": "String | Optional | The DBA of the company",
         "address": {
-            "street": "string | The company headquarters street address",
-            "city": "string | The city where the company headquarters is located ",
-            "state": "string | The state/prov where the company headquarters is located",
-            "zip": "string | The zip/postal of the company headquarters",
+            "street": "String | Required | The company headquarters street address",
+            "city": "String | Required | The city where the company headquarters is located ",
+            "state": "String | Required | The state/prov where the company headquarters is located",
+            "zip": "String | Required | The zip/postal of the company headquarters",
          },
-        "phone": "string | The phone number for the company headquarters",
-        "isCorpOnly": "boolean | True/False",
-        "businessEntityType" : "string | Sole-Proprietorship, Partnership, LLC, Corporation",
-        "federalTaxIdNumber" : "string | The EIN# issued to the company by the IRS. Example",
-        "establishedDate" : "string | Date format YYYY-MM-DD",
-        "businessDescription" : "string – Example: Automotive Business, Mechanic, Doctor, Restaurant, Car Wash, Trucking, Construction, Landscaping, etc.",
-        "website" : "string | URL for borrower’s website"
+        "phone": "String | Optional | The phone Number for the company headquarters",
+        "businessEntityType" : "String | Optional | Sole-Proprietorship, Partnership, LLC, Corporation",
+        "federalTaxIdNumber" : "String | Optional | The EIN# issued to the company by the IRS. Example",
+        "establishedDate" : "String | Optional | Date format YYYY-MM-DD",
+        "businessDescription" : "String | Optional | Example: Automotive Business, Mechanic, Doctor, Restaurant, Car Wash, Trucking, Construction, Landscaping, etc.",
+        "website" : "String | Optional | URL for borrower’s website",
+        "email": "String | Optional | The guarantor's phone Number"
     },
 
     "guarantors": [
         {
-            "firstName": "string | The guarantor's first name",
-            "lastName": "string | The guarantor's last name",
-            "title": "string | Title of the Guarantor",
+            "isGuarantor" : "Boolean | Required | True/False",
+            "firstName": "String | Required | The guarantor's first name",
+            "lastName": "String | Required | The guarantor's last name",
+            "title": "String | Optional | Title of the Guarantor",
             "address": {
-               "street": "string | The guarantor's street address",
-               "city": "string | The city",
-               "state": "string | The state/prov",
-               "zip": "string | The zip/postal",
+               "street": "String | Optional | The guarantor's street address",
+               "city": "String | Optional | The city",
+               "state": "String | Optional | The state/prov",
+               "zip": "String | Optional | The zip/postal",
             },
-            "phone": "string | The guarantor's phone number",
-            "ssn": "string | The guarantor's Social Security Number",
-            "percentOfOwnership": "number | The percentage owned",
-            "authorizedCreditRelease": "boolean | Authorization for credit release.",
-            "isHomeOwner" : "boolean | True/False"
+            "email": "String | Optional | The guarantor's phone Number",
+            "phone": "String | Optional | The guarantor's phone Number",
+            "ssn": "String | Optional | The guarantor's Social Security Number",
+            "percentOfOwnership": "Number | Optional | The percentage owned",
+            "authorizedCreditRelease": "Boolean | Optional | Authorization for credit release.",
+            "isHomeOwner" : "Boolean | Optional | True/False"
     	}
     ],
 
     "equipments": [
         {
-            "description": "string | The product description",
-            "price": "number | The product price"
-            "condition": "string | The condition of the equipment - 'new' | 'used'",
+            "description": "String | Required | The product description",
+            "price": "Number | Required | The product price"
+            "condition": "String | Required | The condition of the equipment - 'new' | 'used'",
             "address": {
-               "street": "string | The equipment location street address",
-               "city": "string | The city",
-               "state": "string | The state/prov",
-               "zip": "string | The zip/postal",
+               "street": "String | Optional | The equipment location street address",
+               "city": "String | Optional | The city",
+               "state": "String | Optional | The state/prov",
+               "zip": "String | Optional | The zip/postal",
             },
-            "vendorName": "string | The vendor's name",
+            "vendorName": "String | Optional | The vendor's name",
             "vendorAddress": {
-               "street": "string | The equipment vendor street address",
-               "city": "string | The city",
-               "state": "string | The state/prov",
-               "zip": "string | The zip/postal",
+               "street": "String | Optional | The equipment vendor street address",
+               "city": "String | Optional | The city",
+               "state": "String | Optional | The state/prov",
+               "zip": "String | Optional |  The zip/postal",
             },
-            "vendorPhone": "string | The vendors's phone",
+            "vendorPhone": "String | Optional |  The vendors's phone",
         }
     ],
 
     "files": [
         {
-            "stream": "string | The base64 conversion string of a pdf document",
-            "name": "string | The name of the file"
+            "stream": "String | Optional | The base64 conversion String of a pdf document",
+            "name": "String | Optional |  The name of the file"
         }
     ],
 
@@ -157,8 +162,8 @@ A "full" credit application contains all information necessary to receive instan
 
 ```json
 {
-    "id": "string | The id of the new application",
-    "status": "string | The status of the new application"
+    "id": "String | The id of the new application",
+    "status": "String | The status of the new application"
 }
 ```
 
@@ -176,3 +181,19 @@ A "full" credit application contains all information necessary to receive instan
 ### If not authorized.
 
 **Code** : `401 UNAUTHORIZED`
+
+### If not data is invalid or missing.
+
+**Code** : `400 Bad Request`
+
+```json
+{
+  "id": null | "",
+  "message": "Data Validation Errors, please correct and try again",
+  "errors": [
+    {
+      "message": "COLLECTION OF ERROR OBJECTS HERE indicating what field is in error and the reason for the error"
+    }
+  ]
+} 
+```

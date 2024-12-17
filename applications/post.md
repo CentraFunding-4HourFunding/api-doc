@@ -4,7 +4,7 @@ Submit a new credit application to Centra Platform.
 
 **URL** : 
 ```
-  Production : https://
+  Production : https://centrafunding.my.salesforce-sites.com/services/apexrest/application
   Dev/Test   : https://centrafunding--partial.sandbox.my.salesforce-sites.com/services/apexrest/application
 ```
 

@@ -89,7 +89,7 @@ Submit a new credit application to Centra Platform.
 
     "files": [
         {
-            "stream": "String | Optional | The base64 conversion String of a pdf document",
+            "data": "String | Optional | The base64 conversion String of a pdf document",
             "name": "String | Optional |  The name of the file"
         }
     ],

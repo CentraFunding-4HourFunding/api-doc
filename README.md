@@ -5,14 +5,15 @@ This documentation outlines API usage for partners who are building integrations
 ## Environments
 
 ### Production
-ht&#8203;tps://centrafunding.my.salesforce-sites.com
+ht&#8203;tps://centrafunding.my.salesforce-sites.com/services/apexrest
 
 ### Dev/Test
-ht&#8203;tp://centrafunding--partial.sandbox.my.salesforce-sites.com
+ht&#8203;tp://centrafunding--partial.sandbox.my.salesforce-sites.com/services/apexrest
 
 ## APIs
 
 * [Create an Application](applications/post.md) : `POST /application`
+* [Add Files to Lead](applications/uploadFiles.md) : `POST /applicationFiles`
 
 ### API Limits
 The following limits are imposed on clients accessing these APIs.

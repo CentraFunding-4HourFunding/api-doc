@@ -1,4 +1,4 @@
-# POST /application
+# POST /applicationFiles
 
 Submit files to newly created Lead.
 
